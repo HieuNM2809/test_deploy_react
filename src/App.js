@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import List from './List';
+import { useState } from "react";
 
 function App() {
+  const [toggle, setToggle] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Heheboz
-        </a>
-      </header>
+    <div className="main-section">
+      <button onClick={() => setToggle(!toggle)}>Toggle </button>
+      {
+        toggle ?
+          <List/>
+          : ''
+      }
+
     </div>
   );
 }
