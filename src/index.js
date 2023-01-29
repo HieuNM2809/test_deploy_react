@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 console.log(process.env);
+console.log("TEST123: " , process.env.TEST123);
 console.log(2);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
